@@ -1,0 +1,19 @@
+{
+  "name": "elgamal",
+  "version": "1.0.0",
+  "description": "elgamal from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hmthanh/ElGamal.git"
+  },
+  "author": "Thanh Hoang-Minh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hmthanh/ElGamal/issues"
+  },
+  "homepage": "https://github.com/hmthanh/ElGamal#readme"
+}
