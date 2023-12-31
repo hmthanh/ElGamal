@@ -62,8 +62,13 @@ function main() {
   const msg = "encryption"
   console.log("Original Message :", msg)
 
-  const q = Math.floor(Math.random() * (Math.pow(10, 50) - Math.pow(10, 20)) + Math.pow(10, 20))
+  let N_min = 2;
+  let N_max = 5;
+
+  const q = Math.floor(Math.random() * (Math.pow(10, N_max) - Math.pow(10, N_min)) + Math.pow(10, N_min))
   const g = Math.floor(Math.random() * (q - 2) + 2)
+
+  console.log("q", q, "g", g)
 
   const key = gen_key(q) // Private key for receiver
   const h = power(g, key, q)
@@ -72,6 +77,7 @@ function main() {
   console.log("g^a used : ", h)
 
   const { en_msg, p } = encrypt(msg, q, h, g)
+  console.log("en_msg", en_msg, "p", p)
   const dr_msg = decrypt(en_msg, p, key, q)
   console.log("Decrypted Message :", dr_msg)
 }
